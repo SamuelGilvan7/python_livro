@@ -51,6 +51,51 @@ else:
 
 print(f"Resultado: {resultado}")
 
+#4.11
+valor_casa = float(input("Informe o valor da casa:"))
+salario_valor = float(input("Informe o seu salário:"))
+qnt_anos = int(input("Anos:"))
+
+#Prestação relação valor casa/anos
+
+prestacao = valor_casa / (qnt_anos * 12)
+if prestacao > (salario_valor * 30/100):
+    print("Empréstimo NEGADO!")
+else: 
+    print("Empréstimo APRAVADO!") 
+
+#4.12
+print("CATEGORIA")
+print("R -- RESIDÊNCIAS")
+print("I -- INDÚSTRIAS")
+print("C -- COMÉRCIO")
+
+
+qnt_kwh = int(input("Quantidade de KWH:"))
+cat =  (input("informe sua categoria:"))
+nova_cat = cat.upper()
+
+valor_pago = 0
+
+if nova_cat == "R":
+    if qnt_kwh <= 500:
+        valor_pago = 0.40 * qnt_kwh
+    else:
+        valor_pago = 0.65 * qnt_kwh
+elif nova_cat == "C":
+    if qnt_kwh <= 1000:
+        valor_pago = 0.55 * qnt_kwh
+    else:
+        valor_pago = 0.60 * qnt_kwh
+elif nova_cat == "I":
+    if qnt_kwh <= 5000:
+        valor_pago = 0.55 * qnt_kwh
+    else:
+        valor_pago = 0.60 * qnt_kwh        
+else:
+    print("Digite a CATEGORIA CORRETA!")        
+
+print(f"A sua categoria {nova_cat} e o valor a ser pago será R${valor_pago:7.2f}")
 
 
 
